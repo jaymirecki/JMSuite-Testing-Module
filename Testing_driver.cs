@@ -4,10 +4,10 @@ using JMSuite;
 class Driver {
     static void Main () {
         Testing.ReportTestResults();
-        Testing.CheckExpect("First Test", Foo, "foo");
         Testing.CheckExpect("Passing Test", Foo, "Foo");
-        Testing.CheckExpect("Error Test", Error, "true");
-        Testing.CheckExpect("Empty Test", Empty, "true");
+        // Testing.CheckExpect("Error Test", Error, "true");
+        // Testing.CheckExpect("Empty Test", Empty, "true");
+        Testing.CheckExpectTimed("Timed Test", Foo, "Foo");
         Testing.ReportTestResults();
     }
 
